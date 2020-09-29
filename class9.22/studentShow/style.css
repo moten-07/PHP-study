@@ -1,0 +1,46 @@
+.list .crumbs{
+	margin:20px;
+	font-size:16px;
+	color:#666; 
+}
+.list table{
+	width:85%;
+	margin:0 auto;
+	text-align:center;
+}
+.list table th{
+	border:1px solid #FDD1AE;
+	height:50px;
+	font-size:24px;
+	color:#5DB9CE;
+	background-color:#FDEADA;
+}
+.list table td{
+	border:1px solid #FDD1AE;
+	height:40px;
+	font-size:16px;
+	color:#444;
+	background-color:#FDEADA;
+	padding-left:10px;
+}
+.list table td a{
+	font-size:13px;
+	color:#5DB9CE;
+	font-family:'Microsoft YaHei';
+	text-decoration:none;
+}
+.list table td a:hover{
+	color:#FA3818;
+	text-decoration:underline;
+}
+.page{
+	text-align:center;
+	padding-top:10px;
+}
+.page a{
+	text-decoration:none;
+	color:#5DB9CE;
+}
+.page a:hover{
+	color:#FA3818;
+}
