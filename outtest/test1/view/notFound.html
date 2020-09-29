@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>首页 - 在线考试系统</title>
+<title>您访问的题库不存在 - 在线考试系统</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,15 +12,7 @@
 	</div>
 	<div class="main">
 		<div class="main-wrap">
-			<div class="main-title">请选择题库</div>
-			<?php foreach($info as $k=>$v): ?>
-				<div class="main-each">
-					<div class="main-each-L"><?php echo $v['title'];?></div>
-					<div class="main-each-R">
-						<span>时间：<?=$v['time']?>分钟 总分：<?=$v['score']?>分</span><a href="test.php?id=<?=$k?>">开始考试</a>
-					</div>
-				</div>
-			<?php endforeach; ?>
+			<div class="main-title">您访问的题库不存在</div>
 		</div>
 	</div>
 	<div class="footer">
