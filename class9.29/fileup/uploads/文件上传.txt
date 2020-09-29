@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+<form action="upload_file.php" method="post" enctype="multipart/form-data">
+    <label for="file">文件名：</label>
+    <input type="file" name="file"><br>
+    <input type="submit" name="submit" value="提交">
+</form>
+</body>
+</html>
+
+<?php
+header("Content-type: text/html; charset=utf-8");
+$file = $_FILES["file"];
+echo '<pre>';
+var_dump($file);
+if ($file["error"] > 0) {
+    echo "错误：" . $file["error"];
+} else {	
+    echo "文件名称：" . $file["name"] . "</br>";
+    echo "文件类型：" . $file["type"] . "</br>";
+    echo "文件大小：" . ($file["size"] / 1024) . "K</br>";
+    echo "文件临时存储的位置：" . $file["tmp_name"] . "</br>";
+ }
+ 
+    //保存上传的文件
+if (file_exists("uploads" . $file["name"])) {
+	echo $file["name"] . "文件已经存在";
+} else {
+	//如果目录不存在则将该文件上传
+	move_uploaded_file($file['tmp_name'], "uploads/" . $file["name"]);
+	echo '文件上传成功!';
+	}
+?>
+
