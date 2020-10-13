@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>书本登录</title>
+		<link rel="stylesheet" href="css/login.css" type="text/css"/>
+	</head>
+	<body>
+		<?php header('Content-Type:text/html;charset=gb2312');?>
+		<div id="logo">
+			<h1><img src="images/LeGo.gif" width="115" height="52" />快来加入乐GO商城吧</h1>
+			<p style="text-align: right; color: #0c0;"><a href="index2.php" style="color: #254B62;">返回首页</a></p>
+			<form action="checkLogin.php" method="post">
+				<p>用户名：<input name="username" type="text" id="username" /></p>
+				<p>密码：<input name="password" type="password" id="password" /></p>
+				<input name="ok" type="submit" style="background: url(images/login_btn2.jpg);width: 99px;height:36px;margin-left: 30px;" value="登录" id="ok"/>
+				<input name="" type="reset" style="background: url(images/login_btn3.jpg);width: 97px;height:36px;margin-left: 30px;" value="重置" />
+			</form>
+		</div>
+	</body>
+</html>

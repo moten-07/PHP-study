@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>乐GO注册</title>
+		<link rel="stylesheet" type="text/css" href="css/regsiter.css" />
+		<script src="js/zcyz.js"></script>
+	</head>
+	<script language="JavaScript">
+		function check(fom){
+			if(fom.username.value==''){
+					document.getElementById("username").innerHTML="<img src='images/wrong1.gif'></img><font color='red'>不能为空</font>";
+				return false;
+				}
+			if(fom.password.value==''){
+					document.getElementById("password").innerHTML="<img src='images/wrong1.gif'></img><font color='red'>不能为空</font>";
+				return false;
+				}
+			if(fom.repasswords.value==''){
+					document.getElementById("repasswords").innerHTML="<img src='images/wrong1.gif'></img><font color='red'>不能为空</font>";
+				return false;
+				}
+			if(fom.telephone.value==''){
+					document.getElementById("telephone").innerHTML="<img src='images/wrong1.gif'></img><font color='red'>不能为空</font>";
+				return false;
+				}else{
+					document.getElementById("telephone").innerHTML="<img src='images/right1.gif'></img>";
+					}
+			if(fom.email.value==''){
+					document.getElementById("email").innerHTML="<img src='images/wrong1.gif'></img><font color='red'>不能为空</font>";
+				return false;
+				}
+			if(fom.address.value==''){
+					document.getElementById("address").innerHTML="<img src='images/wrong1.gif'></img><font color='red'>不能为空</font>";
+				return false;
+				}else{
+					document.getElementById("address").innerHTML="<img src='images/right1.gif'></img>";
+					}
+				
+		}
+	</script>
+	<body>
+		<div id="content">
+			<form action="addRegsiter.php" method="post" style="background: url(images/bg.gif) no-repeat;" id="register" name="user_register_from" onsubmit="return check(this) ;">
+				<h1>用户注册</h1>
+				<ul>
+					<li><a href="#">1.填写注册信息</a></li>
+					<li><a href="#">2.注册成功</a></li>
+					<li style="margin-left:480px; font-size:12px;">以下<font style=" color:#F00;">*</font>为必填项</li>
+				</ul>
+				<table width="571" border="0" id="table2" >
+					<tr>
+						<td width="80" height="49"><font color="#FF0000">*</font>用 户 名：</td>
+						<td width="166"><input name="username" type="text" id="username" value="" /></td>
+						<td style=" text-align:left; padding-left:5px;"><font color="#0000FF";><font color="#0000FF";><img src="images/logintb.jpg" style="padding-right:5px; "/>请填写您常用的Emai地址或手机号码 方便您记忆</font></td>
+					</tr>
+				    <tr>
+						<td height="49"><font color="#FF0000">*</font>登录密码：</td>
+				        <td><input name="passwords" type="password" id="passwords " value=""/></td>
+				        <td style=" text-align:left; padding-left:5px;" ><font color="#0000FF";><img src="images/logintb.jpg" style="padding-right:5px;" />6-20位英文字母或者数字建议采用易记的英文数字组合</font></td>
+					</tr>
+					<tr>
+						<td height="61"><font color="#FF0000">*</font>确认密码：</td>
+						<td><input name="repasswords" type="password"  id="repasswords" value=""/></td>
+						<td style=" text-align:left; padding-left:5px;" ><font color="#0000FF";><img src="images/logintb.jpg" style="padding-right:5px;" />必需与设置密码一致</font></td>
+					</tr>
+					<tr>
+						<td height="49">联系电话：</td>
+						<td><input name="telephone" type="text" id="telephone" value=""/></td>
+						<td  style=" text-align:left; padding-left:5px;" ><font color="#0000FF";><img src="images/logintb.jpg" style="padding-right:5px;" />请正确填写</font></td>
+					</tr>
+					<tr>
+						<td height="49"><font color="#FF0000">*</font>邮箱地址：</td>
+						<td><input name="email" type="text"  id="email" value=""/></td>
+						<td style=" text-align:left; padding-left:5px;" >
+								<font color="#0000FF";><img src="images/logintb.jpg" style="padding-right:5px;" />请务必真实，并确认是您最常用的电子邮箱</font>
+						</td>
+					</tr>
+					<tr>
+						<td height="49">用户地址:</td>
+						<td><input type="text" name="address" id="address" value=""/></td>
+						<td style=" text-align:left; padding-left:5px;" ><font color="#0000FF";><img src="images/logintb.jpg" style="padding-right:5px;" />填写城市名、区、街道、门牌号。</font></td>
+					</tr>
+					<tr>
+						<td height="49"><font color="#FF0000">*</font>验 证 码：</td>
+						<td><input name="code" type="text" value=""/></td>
+						<td style="text-align:left;"><img src="code.php" /></td>
+					</tr>
+					<tr>
+						<td height="55" width="80"></td>
+						<td> 
+							<input type="submit" name="ok" id="ok" style="background:url(images/bottom.gif); width:114px; height:51px; border:0px;" />
+						</td>
+						<td></td>
+					</tr>
+					</table>
+				</form>
+				</div>
+				<div id="footer">
+					<p>地址：北京朝阳区***路***号   版权所有：北京天天书屋有限公司</p>
+					<p>互联网信息服务备案编号：京ICP备06001111号    技术支持：计算机信息工程系</p>
+				</div>
+	</body>
+</html>

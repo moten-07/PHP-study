@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>新闻发布系统</title>
+		<style>
+			body{margin:0;font-family:'Microsoft YaHei';background:url('./images/bg.png');}
+			.box{width:1001px;margin:0 auto;}
+			.top{height:179px;background:url('./images/top.jpg');position:relative;}
+			.title{padding-left:60px;color:#000;font-size:40px;letter-spacing:5px;line-height:160px;}
+			nav{position:absolute;right:0;bottom:6px;}
+			nav a{color:#000;padding:6px 12px;background:#9cb945;text-decoration:none;}
+			nav a:hover{color:#fff;}
+			.main{padding-bottom:10px;background:#fff;}
+			.news-list{width:1000px;border-collapse:collapse;margin-bottom:20px;}
+			.news-list th{background:#0088cc;color:#fff;padding-top:5px;padding-bottom:5px;border:2px solid #fff;}
+			.news-list td{border-bottom:2px dashed #ccc;padding:8px;}
+			.news-list .news-title{text-indent:20px;}
+			.center{text-align:center;}
+		</style>
+	</head>
+	
+	<body>
+		<div class="box">
+			<div class="top">
+				<div class="title">新闻发布系统</div>
+				<nav><a href="#">发表新闻</a></nav>
+			</div>
+			<div class="main">
+				<table class="news_list">
+					<tr><th>新闻标题</th><th width="250">发表时间</th><th width="200">操作</th></tr>
+					<?php foreach ($data as $v):?>
+					<tr>
+						<td class="news-title"><?php echo $v['title'];?></td>
+						<td class="center"><?php echo $v['addtime'];?></td>
+						<td class="center">编辑&emsp;删除</td>
+					</tr>
+					<?php endforeach;?>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
